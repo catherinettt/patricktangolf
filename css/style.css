@@ -1,0 +1,27 @@
+body{
+	background-image: url('images/tiny_grid.png');	
+	
+}
+
+#main{
+	
+	
+	margin-top:60px;
+	margin-bottom: 20px;
+	
+}
+
+#main .page-header{
+	border-color: #888;
+	
+}
+
+#main .main-bg{
+	height: 280px;
+	
+}
+
+#main #main-links{
+	margin-top:20px;
+	
+}
