@@ -1,0 +1,65 @@
+body{
+	background-image: url('../images/tiny_grid.png');	
+	
+}
+
+
+#header{
+  padding: 20px 0;
+}
+#header h1 {
+  font-weight: 300;
+  font-size: 50px;
+  height:50px;
+}
+#header h1 span{
+  font-weight: 700;
+}
+menu{
+  margin: 0;
+  padding: 0;
+  background-color: rgba(0,0,0,0.2)
+}
+menu li{
+  list-style: none;
+  display: inline-block;
+}
+
+
+menu li:hover{
+}
+menu li a:active{
+  color: red;
+}
+
+
+menu li a{
+  display: inline-block;
+  padding: 10px 20px;
+  color: #333;
+  font-size: 16px;
+  font-family: "Helvetica Neue";
+  font-weight: 200;
+
+
+}
+
+
+menu li a:link{
+  text-decoration: none;
+}
+
+menu li a:hover{
+  background-color: rgba(0,0,0,0.5);
+  color: white;
+}
+
+.page{
+  background-color: rgba(255,255,255,0.5);
+}
+
+#footer{
+  border-top: 2px solid #333;
+  padding-top:20px;
+  margin-top:20px;
+}

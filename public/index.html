@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+
+	<title> Patrick Tan </title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="bootstrap/css/bootstrap.css">
+  <link rel="stylesheet" href="bootstrap/css/bootstrap-responsive.css">
+  <link rel="stylesheet" href="stylesheets/style.css">
+
+  
+</head>
+
+
+<body>
+  <div class="container">
+
+  <div id="header">
+    <h1> <span>P</span>ATRICK <span>T</span>AN </h1>
+  	<menu>
+  	 <li> <a href=""> HOME </a></li>
+  	 <li> <a href="#video"> VIDEO </a></li> 
+  	 <li> <a href="#news"> NEWS </a></li> 
+  	 <li> <a href="#photo"> PHOTO </a></li> 
+  	 <li> <a href="#contact"> CONTACT </a></li> 
+
+  	</menu>
+  	
+  </div>
+  	
+  	  <section kb-inject="AppViewModel">
+    	  <section class='pane-navigator page'></section>
+
+    	 </section>
+  
+  
+  <div id="footer">
+    <p> patricktangolf.com 2012 | created by <a href="http://catherine-tan.com" target=_blank>Catherine Tan </a></p>
+  </div>
+  
+  </div>
+	
+  <script type="text/x-jquery-tmpl" id="home">
+  	<div class="row">
+  	 <div class="span8">
+  	   <h4> about me </h4>
+  	   <p>
+  	     Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum
+  	   </p>
+  	 </div>
+  	 
+  	 <div class="span4">
+  	   video:
+  	   photo:
+  	 </div>
+  	</div>
+  </script>
+  
+  	
+  <script type="text/x-jquery-tmpl" id="news">
+  	<h1> News </h1>
+  </script>
+    <script type="text/x-jquery-tmpl" id="video">
+  	<h1> Video </h1>
+  	<div class="row">
+  	 <!-- ko foreach: videos -->
+    	 <div class="span3 well">
+    	   <p data-bind="text: title"></p>
+    	   <p data-bind="text: description"></p>
+    	   <img data-bind="attr: {src: thumbnail().hqDefault}">
+    	 </div>
+  	 <!-- /ko -->
+  	</div>
+  </script>
+    <script type="text/x-jquery-tmpl" id="photo">
+  	<h1> Photos </h1>
+  </script>
+    <script type="text/x-jquery-tmpl" id="contact">
+  	<h1> Contact Me </h1>
+  </script>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+  <script type="application/javascript" src="javascripts/knockback-full-stack.min.js"></script>
+  <script src="javascripts/app.js"></script>
+  
+<!--
+    <script>
+    $(document).ready(function() {
+      $.get("http://gdata.youtube.com/feeds/api/users/patricktangolf/uploads?v=2&alt=jsonc", function(data){
+        var videos = data["data"]["items"]
+        videos.forEach(function(item){
+          console.log(item["id"])
+          
+        })
+      })
+      
+    })
+  </script>
+-->
+</body>
+
+</html>
