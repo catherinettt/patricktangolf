@@ -1,5 +1,6 @@
 body{
-	background-image: url('../images/tiny_grid.png');	
+	background-image: url('../images/groovepaper.png');	
+	font-family: 'Open Sans', Helvetica, sans-serif;
 	
 }
 
@@ -7,14 +8,29 @@ body{
 #header{
   padding: 20px 0;
 }
+
 #header h1 {
-  font-weight: 300;
-  font-size: 50px;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  font-size: 60px;
   height:50px;
+  font-family: "Helvetica Neue";
+  font-weight: 100;
 }
-#header h1 span{
-  font-weight: 700;
+
+
+#header h1 a:link{
+   color: #333
 }
+
+#header h1 a:visited{
+  color: #333
+    }
+
+#header h1 a:hover{
+  color: #61004d;
+}
+
 menu{
   margin: 0;
   padding: 0;
@@ -23,6 +39,9 @@ menu{
 menu li{
   list-style: none;
   display: inline-block;
+  padding: 0 !important;
+  margin:0 !important;
+
 }
 
 
@@ -38,16 +57,21 @@ menu li a{
   padding: 10px 20px;
   color: #333;
   font-size: 16px;
-  font-family: "Helvetica Neue";
+  font-weight: 500;
+    font-family: "Helvetica Neue";
   font-weight: 200;
-
+  
 
 }
 
 
-menu li a:link{
+a:link{
   text-decoration: none;
+
 }
+
+
+
 
 menu li a:hover{
   background-color: rgba(0,0,0,0.5);
@@ -55,11 +79,57 @@ menu li a:hover{
 }
 
 .page{
-  background-color: rgba(255,255,255,0.5);
+  background-color: rgba(255,255,255,0.8);
+  box-shadow: 1px 1px 6px 1px rgba(0,0,0,0.2);
+  padding: 20px;
+  border-radius: 4px;
 }
 
 #footer{
   border-top: 2px solid #333;
   padding-top:20px;
   margin-top:20px;
+}
+.video_thumb_box{
+  position: relative;
+  opacity: 0.8;
+}
+.video_thumb_box:hover{
+  opacity: 1;
+  
+}
+.video_thumb_box:hover a{
+  opacity: 1;
+}
+
+.video_thumb_box a{
+  position: absolute;
+  display: block;
+  top: 45%;
+  left: 36%;
+  font-size: 20px;
+  font-weight: 800;
+  color: white;
+  border: 2px solid white;
+  padding: 10px;
+  border-radius: 5px;
+  opacity: 0.5;
+  background-color: rgba(255,255,255,0.5)
+}
+.video_preview:nth-child(4n){
+  margin-left: 0 !important;
+  }
+  
+.achievement_list{
+  list-style: none;
+  margin-left: 10px;
+}
+
+.achievement_list li:before{
+  content: "/ ";
+}
+
+.choose{
+  content: "play" 
+  
 }

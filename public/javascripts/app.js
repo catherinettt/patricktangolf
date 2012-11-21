@@ -38,9 +38,10 @@
 
     AppViewModel.prototype.loadPage = function(el) {
       if (this.active_el) {
+        $(this.active_el).hide('slow');
         ko.removeNode(this.active_el);
       }
-      $('.page').append(this.active_el = el);
+      $('.page').append(this.active_el = el).hide().fadeIn();
       return $(el).addClass('active');
     };
 
@@ -55,8 +56,16 @@
       router.route('news', null, function() {
         return _this.loadPage(kb.renderTemplate('news', {}));
       });
+      router.route('achievement', null, function() {
+        return _this.loadPage(kb.renderTemplate('achievement', {}));
+      });
       router.route('video', null, function() {
-        return _this.loadPage(kb.renderTemplate('video', new VideosViewModel(_this.videos)));
+        return _this.loadPage(kb.renderTemplate('video_list', new VideosViewModel(_this.videos)));
+      });
+      router.route('video/:id', null, function(id) {
+        return _this.loadPage(kb.renderTemplate('video', {
+          id: id
+        }));
       });
       router.route('photo', null, function() {
         return _this.loadPage(kb.renderTemplate('photo', {}));
@@ -75,10 +84,9 @@
 
     __extends(VideoViewModel, _super);
 
-    function VideoViewModel(model, options) {
+    function VideoViewModel(model) {
       VideoViewModel.__super__.constructor.call(this, model, {
-        options: options,
-        keys: ['description', 'title', 'thumbnail']
+        keys: ['description', 'title', 'thumbnail', 'id']
       });
     }
 
@@ -87,7 +95,6 @@
   })(kb.ViewModel);
 
   window.VideosViewModel = function(videos) {
-    console.log(videos);
     this.videos = kb.collectionObservable(videos, {
       view_model: VideoViewModel
     });
