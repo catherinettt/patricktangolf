@@ -1,0 +1,75 @@
+
+
+
+.top-bar{
+	height: 10px;
+	width: 100%;
+	background-color: #00A19A;
+	position: fixed;
+	z-index: 1;
+}
+.title{
+	font-family: 'Lato';
+	font-weight: 100;
+	font-size: 4.5em;
+	color: white;
+}
+
+.top-container{
+	position: relative;
+	font-family: 'Lato';
+	background-color: rgba(0,161,154,0.5); 
+}
+
+.top-bg{
+	background-image: url('../img/pat_1_bw.jpg');
+	width: 100%;
+	height: 600px;
+	background-size: cover;
+	background-position: center;
+}
+.top-content{
+	bottom: 1em;
+	right: 1em;
+	position: absolute;
+	text-align: right;
+}
+
+.top-content .nav{
+	color: white;
+	font-weight: 100;
+	font-size: 20px;
+}
+
+.nav a{
+	color: white;
+	text-decoration: none;
+}
+
+.nav a.active{
+	border-bottom: 2px solid #00A19A;
+}
+
+
+.main{
+	height: 600px;
+	width: 600px;
+	margin: 50px auto;
+	font-family: 'Lato';
+}
+@media (max-width: 699px){
+  .title {
+    font-size: 2em;
+  }
+  .top-container{
+  	height: 200px;
+  }
+
+  .top-bg{
+  	height: 200px;
+  }
+
+  .top-content .nav{
+  	font-size: 14px;
+  }
+}

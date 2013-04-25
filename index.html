@@ -1,0 +1,61 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Ember Starter Kit</title>
+  <link rel="stylesheet" href="css/normalize.css">
+  <link href='http://fonts.googleapis.com/css?family=Lato:100,400' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>    
+
+  <script type="text/x-handlebars">
+
+  <div class="top-bar"></div>
+  <div class="top-container">
+    <div class="top-bg"></div>
+    <div class="top-content">
+      <div class="title">PATRICK TAN</div>
+      <div class="nav">
+      
+        {{#linkTo "about"}}about{{/linkTo}} | {{#linkTo "schedule"}}schedule{{/linkTo}} | {{#linkTo "achievements"}}achievements{{/linkTo}}| {{#linkTo "contact"}}contact{{/linkTo}}
+      </div>
+    </div>
+  </div>  
+  <div>
+    {{outlet}}
+  </div>
+
+   </script>
+
+  <script type="text/x-handlebars" id="about">
+    <div class="main">
+    ABOUT ME
+    <p> Hey everyone, well here goes my introduction. It is so nice for you to be reading this; my name is Patrick Tan, living in the wonderful city of Vancouver, BC. I will graduate from high school in 2015, and I am a very avid golfer. I do a lot of other activities as well, believe it or not, I love to draw, I love to snowboard, and I’m on my school’s junior basketball team. But golfing is my true passion and to be able to play on a professional level is my dream. Anyway, thank you for visiting my website, I hope you enjoy your stay.
+        </p>
+        <hr>
+        <p>Bonjour tout le monde, c’est mon introduction. Je m'appelle Patrick; et j’habite dans la belle ville de Vancouver! Je suis dans la classe de 2015, et j’aime jouer au golf beaucoup. Je fais beaucoup d’autre activites aussi, j’aime l’art, j’adore d'esquisser, j'adore de la planche de neige, et j suis dans mon équipe de basketball des écoles. Mais golf est ma vraie passion et à jouer sur la scène professionnelle est mon rêve. Bien, merci de visiter mon website, et je vous souhaite un bon séjour. </p>
+    </div>
+  </script>
+
+  <script type="text/x-handlebars" id="schedule">
+    <div class="main">
+    SCHEDULE
+    </div>
+  </script>
+
+<script type="text/x-handlebars" id="achievements">
+    <div class="main">
+    SCHEDULE
+    </div>
+  </script>
+
+  <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+  <script src="js/jquery.scrollTo.js"></script>
+  <script src="js/handlebars.js"></script>
+  <script src="js/ember.js"></script>
+  <script src="js/app.js"></script>
+
+</body>
+</html>
